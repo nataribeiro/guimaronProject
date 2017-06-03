@@ -56,7 +56,41 @@ $(document).ready(function(){
   });
 
   $('body').mousemove(function(e){
-     $('.follow').css({'top': e.clientY + 10, 'left': e.clientX + 10});
+    $('.follow').css({'top': e.clientY + 10, 'left': e.clientX + 10});
+  });
+
+
+  var spreadsheetID = "17cCrmBKKAAO_qGV7TMLIJ8KsUXHPhfQTMYM41myKvl8";
+
+  // Make sure it is public or set to Anyone with link can view
+  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+  var dataSet;
+
+
+  var dataSet = new Array();
+
+  $.getJSON(url, function(data) {
+
+    var entry = data.feed.entry;
+
+    $(entry).each(function(index, data){
+      // Column names are name, age, etc.
+      console.log(data.gsx$title.$t);
+      dataSet.push([data.gsx$title.$t, data.gsx$date.$t, data.gsx$system.$t]);
+
+
+
+    });
+
+    $('#example').DataTable({
+      data: dataSet,
+      columns: [
+        { title: 'Título' },
+        { title: 'Lançamento' },
+        { title: 'Console' }
+      ]
+    });
+
   });
 
 });
