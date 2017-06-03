@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   var $doc = $('html, body');
   $('.internalink').click(function() {
+
     var topmargin = 250;
     if( ($.attr(this, 'href').localeCompare('#sale') == 0) ||
     ($.attr(this, 'href').localeCompare('#galery') == 0)){
@@ -11,6 +12,7 @@ $(document).ready(function(){
       scrollTop: $( $.attr(this, 'href') ).offset().top - topmargin
     }, 500);
     return false;
+
   });
 
   // init controller
@@ -48,7 +50,18 @@ $(document).ready(function(){
     }else{
       swal("Ops!!", "Precisa selecionar um item para interesse de compra.", "info")
     }
+
   });
+
+  $('#example').DataTable({
+    data: dataSet,
+    columns: [
+      { title: 'Título' },
+      { title: 'Lançamento' },
+      { title: 'Console' }
+    ]
+  });
+ });
 
 
   $('#aniimated-thumbnials').lightGallery({
