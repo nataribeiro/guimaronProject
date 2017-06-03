@@ -47,6 +47,11 @@ header img {
   top: 0;
 }
 
+.banner {
+  width: 100%;
+  height: 84%;
+}
+
 nav ul {
   margin: 0;
 }
