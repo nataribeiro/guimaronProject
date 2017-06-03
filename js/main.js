@@ -5,10 +5,10 @@ $(document).ready(function(){
 
 
       var topmargin = 250;
-      
 
 
-      if( ($.attr(this, 'href').localeCompare('#sale') == 0) ||  
+
+      if( ($.attr(this, 'href').localeCompare('#sale') == 0) ||
           ($.attr(this, 'href').localeCompare('#galery') == 0)){
         topmargin = 48;
       }
@@ -41,7 +41,7 @@ $(document).ready(function(){
           .addTo(controller);
 
 
-  var nav = $('.nav-container');  
+  var nav = $('.nav-container');
     $(window).scroll(function () {
       if ($(this).scrollTop() > 208) {
         nav.addClass("f-nav");
@@ -50,23 +50,31 @@ $(document).ready(function(){
       }
   });
 
-  $( "#presale" ).submit(function( event ) {
-
-
-    if ( $('div.checkbox-group.required :checkbox:checked').length > 0){
-      swal("Obrigado!!", "Seus dados foram enviados com sucesso!!!", "success")
-      $('#presale')[0].reset();
-   }else{
-      swal("Ops!!", "Precisa selecionar um item para interesse de compra.", "info")
-   }
-
-
-  });
-
-
 $('#aniimated-thumbnials').lightGallery({
     thumbnail:true
-}); 
- 
+});
+
+
+// GOOLE SHEETS
+ var spreadsheetID = "17cCrmBKKAAO_qGV7TMLIJ8KsUXHPhfQTMYM41myKvl8";
+ var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+ $.getJSON(url, function(data) {
+  var entry = data.feed.entry;
+  var dataSet = [];
+  $(entry).each(function(i, data){
+    console.log( entry[i].gsx$date.$t);
+    dataSet.push([entry[i].gsx$title.$t, entry[i].gsx$date.$t,entry[i].gsx$system.$t]);
+  });
+
+  $('#example').DataTable({
+    data: dataSet,
+    columns: [
+      { title: 'Título' },
+      { title: 'Lançamento' },
+      { title: 'Console' }
+    ]
+  });
+ });
+
 
 });
