@@ -1,11 +1,13 @@
-
+<!DOCTYPE html UTF-8>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
 
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+
   <link type="text/css" rel="stylesheet" href="css/lightGallery.css" />
+
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/ScrollMagic.js"></script>
@@ -13,21 +15,14 @@
   <script type="text/javascript" src="js/animation.gsap.js"></script>
   <script src="js/sweetalert.min.js"></script>
 
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 
   <script src="js/lightgallery.min.js"></script>
   <!-- lightgallery plugins -->
   <script src="js/lg-thumbnail.js"></script>
   <script src="js/lg-fullscreen.js"></script>
-  <script src="js/lightgallery.min.js"></script>
-  <!-- lightgallery plugins -->
-  <script src="js/lg-thumbnail.js"></script>
-  <script src="js/lg-fullscreen.js"></script>
-
 
   <title>Um pouco sobre Zelda</title>
 </head>
-
 <body>
 <img src="img/fairy.gif" class="follow" id="fairy_follower"/>
 <header class="row header-decorated" id="topo" >
@@ -75,8 +70,10 @@
     </div>
   </section>
 
+
   <div id="parallax2" class="parallaxParent">
     <div id="tp_zelda"></div>
+
   </div>
   <section id="section_tp">
     <div class="header">
@@ -196,20 +193,56 @@
       <div class="footer"><line></line></div>
     </section>
 
-
     <section id="sale">
       <div class="title">
-        informações sobre a franquia Zelda
+        Registre interesse no produto (Pré-Venda)
       </div>
+
       <div class="main form" >
 
+        <form id="presale" action="javascript:void(0);" name="sale"  method="post" class="form-sale">
+          <label>
+            <p>Nome:</p>
+            <input type="text" id="nome" required="true">
+          </label>
+          <label>
+            <p>E-mail:</p>
+            <input type="email" id="email" required="true">
+          </label>
+          <label>
+            <p>Telefone (DD)NNNN-NNNN:</p>
+            <input	pattern="\(\d{2}\)\d{4}-\d{4}" type="tel" id="telefone" required="true">
+          </label>
 
-          <table id="example" class="display" width="100%"></table>
+          <label>
+            <p>Data de Nascimento</p>
+            <input type="date" name="bday" required>
+          </label>
 
+          <div class="box_form checkbox-group required center">
+            <label>Jogo:</label>
+
+            <label class="checkbox" for="oot">
+              <input style="margin:0;padding:0;" type="checkbox" id="oot" name="groupcheckbox" value="oot"/>
+              Ocarina Of Time
+            </label>
+
+            <label class="checkbox" for="tp">
+              <input type="checkbox" id="tp" name="groupcheckbox" value="tp"/>
+              Twilight Princess
+            </label>
+
+            <label class="checkbox" for="botw">
+              <input type="checkbox" id="botw" name="groupcheckbox" value="botw"/>
+              Breath of the Wild
+            </label>
+
+          </div>
+
+          <input type="submit" value="Enviar">
+        </form>
       </div>
     </section>
-    <footer>
-    </footer>
   </main>
 </body>
 </html>
