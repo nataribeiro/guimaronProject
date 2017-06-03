@@ -1,0 +1,302 @@
+* {
+  font-family: 'defaultFont';
+	src: url('WebFont.eot');
+	src: url('WebFont.eot?#iefix') format('embedded-opentype'),
+	     url('WebFont.woff') format('woff'),
+	     url('WebFont.ttf') format('truetype'),
+	     url('WebFont.svg#webfont') format('svg');
+  font-size: 16px;
+}
+
+@font-face {
+    font-family: 'elfico'; /*a name to be used later*/
+    src: url('../fonts/Elfica.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'plataforma'; /*a name to be used later*/
+    src: url('../fonts/GameLogos.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'social'; /*a name to be used later*/
+    src: url('../fonts/SocialLogos.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'zelda'; /*a name to be used later*/
+    src: url('../fonts/zelda.ttf'); /*URL to font*/
+}
+
+body {
+  min-width: 600px;
+  min-height: -webkit-calc(100% - 100px);     /* Chrome */
+  min-height: -moz-calc(100% - 100px);     /* Firefox */
+  min-height: calc(100% - 100px);
+}
+
+header {
+	min-width: 600px;
+ 	width: 100%;
+ 	height: 242px;
+ 	top: 0;
+ 	background-color: #FFF;
+}
+
+header img {
+ 	width: 100%;
+ 	height: 200px;
+ 	top: 0;
+}
+
+.nav {
+	left: 0;
+	top: 0;
+	width: 100%;
+ 	display: inline-block;
+  	background-color: white;
+  	height: 42px;
+}
+ /* this make our menu fixed top */
+.f-nav{
+	left: 0;
+	top: 0;
+	width: 100%;
+	display: inline-block;
+  	background-color: white;
+  	height: 42px;
+	position: fixed;
+	z-index: 5;
+}
+
+.nav ul {
+	margin: 0;
+}
+.nav ul li{
+	width: auto;
+	text-align: center;
+	float: right;
+	display: inline-block;
+}
+.nav ul a {
+	font-family: verdana;
+	font-weight: bold;
+	color: #000;
+	padding: 0px 10px;
+	margin: 10px 0;
+	float: right;
+}
+.nav ul a:hover{
+	background-color: #ec3b9d;
+	float: right;
+}
+
+main {
+	position: relative;
+}
+
+
+section{
+	display: inline-block;
+}
+
+section .header{
+	font-family: zelda;
+	font-size: 4em;
+	font-style: bold;
+	display: block; /* or inline-block */
+  	text-overflow: ellipsis;
+  	word-wrap: break-word;
+  	overflow: hidden;
+  	max-height: 1em;
+  	line-height: 1em;
+  	padding: 10px;
+	margin: 10px 0;
+}
+
+section .title{
+	font-family: zelda;
+	font-size: 4em;
+	font-style: bold;
+	display: block; /* or inline-block */
+  	text-overflow: ellipsis;
+  	word-wrap: break-word;
+  	overflow: hidden;
+  	max-height: 1em;
+  	line-height: 1em;
+  	padding: 10px;
+	margin: 10px 0;
+}
+
+section .header::after{
+	font-family: elfico;
+	font-size: 10px;
+	content: "orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+}
+
+section .main{
+	font-family: zelda;
+	padding: 10px;
+	margin: 10px 0;
+}
+section .main p{
+	font-family: zelda;
+	text-align: justify;
+
+}
+
+section .main .right{
+  float: right;
+  width: auto;
+  margin: 20px
+}
+
+section .main .left{
+  float: left;
+  width: auto;
+  margin: 20px
+}
+
+section .footer{
+	font-family: zelda;
+	font-size: 2em;
+	font-style: bold;
+	text-align: right;
+	margin: 10px 0;
+}
+
+
+section .footer line{
+	font-family: zelda;
+	font-size: 4em;
+	font-style: bold;
+	display: inline-block; /* or inline-block */
+  	text-overflow: ellipsis;
+  	word-wrap: break-word;
+  	overflow: hidden;
+  	text-align: center;
+  	max-height: 1em;
+  	line-height: 1em;
+
+}
+
+section .footer img{
+	height: 120;
+	width: auto;
+	float: left;
+}
+
+line::after{
+
+  	text-overflow: ellipsis;
+  	overflow: hidden;
+	font-family: elfico;
+	font-size: 10px;
+	text-overflow: hidden;
+	content: "orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+}
+
+.box{
+	width:250px;
+	height:150px;
+	background-color:#666;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+	border-width: thin;
+ 	border-style: solid;
+ 	border-color:black;
+}
+
+.box_galery{
+	width: 150px;
+	height:auto;
+	background-color:#666;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+	border-width: thin;
+ 	border-style: solid;
+ 	border-color:black;
+}
+
+.box_galery:hover{
+	background-color:#D72;
+}
+
+.box_form{
+
+	width:40%;
+	height:auto;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+
+}
+
+.box img{
+	max-width: 100%;
+  	max-height: 100%;
+}
+
+.box:hover{
+	background-color:#222;
+}
+
+#botw_zelda{
+	width: 100vw;
+	margin: 0px;
+	padding: 0px;
+	background-image: url(../img/header_botw.jpg);
+}
+#tp_zelda{
+	width: 100vw;
+	background-image: url(../img/header_tp.png);
+}
+#oot_zelda{
+	width: 100vw;
+	margin: 0px;
+	padding: 0px;
+	background-image: url(../img/header_oot.jpg);
+}
+
+.parallaxParent {
+	height: 200px;
+	overflow: hidden;
+}
+
+.parallaxParent > * {
+	height: 200%;
+	position: relative;
+	top: -100%;
+}
+
+
+/*FORM*/
+.form{
+	background-color: #DD8;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+input{
+	width: 100%;
+}
+
+.box_form label {
+	font-size: 1.3em;
+	font-family: zelda;
+  	display: block;
+  	padding-left: 15px;
+  	text-indent: -15px;
+}
+
+.checkbox input {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+}
