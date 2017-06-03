@@ -273,3 +273,8 @@ input{
   top: -1px;
   *overflow: hidden;
 }
+
+#fairy_follower {
+  position: fixed;
+  z-index: 5;
+}
