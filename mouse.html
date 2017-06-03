@@ -1,0 +1,29 @@
+
+
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+  <style>
+  #sketch {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    background-color: yellow;
+  }
+  #myimg {
+    position: absolute;
+    z-index: 1000;
+  }
+  </style>
+
+</head>
+<body>
+    <div id="sketch"></div>
+  <img src="img/fairy.gif" class="follow" id="myimg"/>
+
+</body>
+<script type="text/javascript">
+$("#sketch").mousemove(function(e){
+  $('.follow').css({'top': e.clientY - 20, 'left': e.clientX - 20});
+});
+</script>
